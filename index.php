@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
 $username = "root";
-$password = "123456";
+$password = "";
 $dbname = "card";
 
 // Create connection
@@ -31,10 +31,15 @@ $stmt->execute();
 <body>
     <?php
     while($data=$stmt->fetch()) {
+        $id = $data['idstudent'];
+        $name = $data['fullname'];
+        $code = $data['code'];
+        $email = $data['email'];
+        $phone = $data['phone'];
         echo "<div class='card' style='width: 18rem;'>
-        <img class='card-img-top' src='$data['idstudent'] ' alt='Card image cap'>
-        <div class='card-body'>
-          <h5 class='card-title'>$fullname</h5>
+            <img class='card-img-top' src='$id ' alt='Card image cap'>
+            <div class='card-body'>
+            <h5 class='card-title'>$name</h5>
           <p class='card-text'>$code $email $phone</p>
         </div>
       </div>";
