@@ -13,9 +13,6 @@ $stmt->execute();
 
 ?>
 
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,13 +33,15 @@ $stmt->execute();
         $code = $data['code'];
         $email = $data['email'];
         $phone = $data['phone'];
-        echo "<div class='card' style='width: 18rem;'>
-            <img class='card-img-top' src='$id ' alt='Card image cap'>
+        echo "<div style='padding: 30px;'>
+        <div class='card' style='width: 18rem;'>
+            <img class='card-img-top' src='photo/$id.jpg' alt='Card image cap'>
             <div class='card-body'>
             <h5 class='card-title'>$name</h5>
           <p class='card-text'>$code $email $phone</p>
         </div>
-      </div>";
+        </div>
+        </div>";
     }
       ?>
 </body>
