@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
 $username = "root";
-$password = "";
+$password = "123456";
 $dbname = "card";
 
 // Create connection
@@ -24,6 +24,7 @@ $stmt->execute();
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
 </head>
 <body>
     <?php
@@ -33,9 +34,10 @@ $stmt->execute();
         $code = $data['code'];
         $email = $data['email'];
         $phone = $data['phone'];
-        echo "<div style='padding: 30px;'>
-        <div class='card' style='width: 18rem;'>
-            <img class='card-img-top' src='photo/$id.jpg' alt='Card image cap'>
+        echo " 
+        <div style='padding-left: 20px; padding-top: 20px; float: left;'>
+        <div class='card' style='width:18rem; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);'>
+            <img class='card-img-top' src='photo/$id.jpg' style='height:18rem;' alt='Card image cap'>
             <div class='card-body'>
             <h5 class='card-title'>$name</h5>
           <p class='card-text'>$code $email $phone</p>
