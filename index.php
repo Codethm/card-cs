@@ -40,7 +40,7 @@ $stmt->execute();
             <img class='card-img-top' src='photo/$id.jpg' style='height:18rem;' alt='Card image cap'>
             <div class='card-body'>
             <h5 class='card-title'>$name</h5>
-          <p class='card-text'>$code $email $phone</p>
+          <p class='card-text'>$code <br> $email <br> $phone</p>
         </div>
         </div>
         </div>";
